@@ -1,0 +1,19 @@
+<div id="container">
+
+    <div>
+        <img src="../../../assets/Taxi.png" width="100">
+    </div>
+    <h1>Choose your Destination</h1>
+    <form (ngSubmit)="onSubmit(myForm)" #myForm="ngForm">
+        <div class="form-group">
+            <label for="userInput">Enter the destination in km:</label>
+            <input type="number" class="form-control" id="userInput" [(ngModel)]="userInput" name="userInput" required>
+        </div>
+        <button type="submit" class="btn btn-primary">Confirm</button>
+    </form>
+
+    <hr>
+    <div *ngIf="displayValue">
+        {{ displayValue }}
+    </div>
+</div>
